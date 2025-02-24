@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impact Africa Network Onboarding</title>
+    <style>
+      body {
+        background-color: #1a202c;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+
+      .circle-container {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+      }
+
+      .center-hub {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        background: #2d3748;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        box-sizing: border-box;
+        border: 3px solid #4299e1;
+        z-index: 1;
+        font-size: 14px;
+      }
+
+      .section {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 3px solid transparent;
+        z-index: 2;
+      }
+
+      .section:hover {
+        transform: scale(1.1);
+        z-index: 10;
+      }
+
+      .section-content {
+        display: none;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.95);
+        border-radius: 8px;
+        padding: 15px;
+        width: 200px;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        font-size: 12px;
+      }
+
+      .section:hover .section-content {
+        display: block;
+      }
+
+      .title {
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 6px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin: 6px 0;
+        font-size: 12px;
+      }
+
+      /* Position-specific content placement */
+      .section-0 .section-content {
+        /* Top */
+        bottom: 115%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .section-1 .section-content {
+        /* Top Right */
+        left: 115%;
+        top: 0;
+      }
+
+      .section-2 .section-content {
+        /* Bottom Right */
+        left: 115%;
+        bottom: 0;
+      }
+
+      .section-3 .section-content {
+        /* Bottom Left */
+        right: 115%;
+        bottom: 0;
+      }
+
+      .section-4 .section-content {
+        /* Top Left */
+        right: 115%;
+        top: 0;
+      }
+
+      .section svg {
+        width: 20px;
+        height: 20px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle-container">
+      <div class="center-hub">
+        <div>
+          <svg
+            style="width: 24px; height: 24px; margin: 0 auto 6px"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4m0-4h.01" />
+          </svg>
+          Impact Africa Network
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sections = [
+        {
+          title: "Who We Are",
+          color: "#48BB78",
+          content: [
+            "Mission & Vision 2030",
+            "Founder's Story",
+            "Core Values",
+            "Leadership Structure",
+            "Ultimate Goal",
+          ],
+          icon: '<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>',
+        },
+        {
+          title: "Systems & Tools",
+          color: "#9F7AEA",
+          content: [
+            "Communication Platforms",
+            "Project Management",
+            "Digital Resources",
+            "Learning Systems",
+            "Work Tools",
+          ],
+          icon: '<path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>',
+        },
+        {
+          title: "Learning & Development",
+          color: "#ECC94B",
+          content: [
+            "Skill Development",
+            "Learning Resources",
+            "Mentorship Program",
+            "Knowledge Sharing",
+            "Role-Based Learning",
+          ],
+          icon: '<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>',
+        },
+        {
+          title: "Growth & Impact",
+          color: "#ED64A6",
+          content: [
+            "Startup Portfolio",
+            "Career Progression",
+            "Performance Metrics",
+            "Impact Measurement",
+            "Team Goals",
+          ],
+          icon: '<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>',
+        },
+        {
+          title: "Process & Policies",
+          color: "#F56565",
+          content: [
+            "HR Guidelines",
+            "Performance Review",
+            "Meeting Structures",
+            "Feedback Systems",
+            "Documentation",
+          ],
+          icon: '<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>',
+        },
+      ];
+
+      function createSections() {
+        const container = document.querySelector(".circle-container");
+        const radius = 170; // Reduced radius to keep elements in viewport
+
+        sections.forEach((section, index) => {
+          const angle =
+            (index * (360 / sections.length) - 90) * (Math.PI / 180);
+          const left = 250 + radius * Math.cos(angle);
+          const top = 250 + radius * Math.sin(angle);
+
+          const sectionEl = document.createElement("div");
+          sectionEl.className = `section section-${index}`;
+          sectionEl.style.left = `${left - 50}px`;
+          sectionEl.style.top = `${top - 50}px`;
+          sectionEl.style.backgroundColor = section.color;
+          sectionEl.style.borderColor = section.color;
+
+          sectionEl.innerHTML = `
+                    <div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            ${section.icon}
+                        </svg>
+                        <div class="title">${section.title}</div>
+                        <div class="section-content">
+                            <h3 style="margin-top: 0; margin-bottom: 10px; font-size: 14px;">${
+                              section.title
+                            }</h3>
+                            <ul>
+                                ${section.content
+                                  .map((item) => `<li>• ${item}</li>`)
+                                  .join("")}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+
+          container.appendChild(sectionEl);
+        });
+      }
+
+      createSections();
+    </script>
+  </body>
+</html>
